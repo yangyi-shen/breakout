@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://byfedrdtyr8bg" path="res://scripts/HUD.cs" id="1_fls4u"]
 [ext_resource type="FontFile" uid="uid://cpmugfs7rj75j" path="res://assets/font.ttf" id="1_qpvh6"]
-[ext_resource type="Resource" uid="uid://77htxcakrnlr" path="res://resources/HighScore.tres" id="2_1etfg"]
+[ext_resource type="Resource" uid="uid://bcm0dtxq32pcs" path="res://resources/HighScore.tres" id="2_1etfg"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_fls4u")
