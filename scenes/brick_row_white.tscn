@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://7v0iom1fhlbx"]
+
+[ext_resource type="PackedScene" uid="uid://7u5uwgsgk8w1" path="res://scenes/brick.tscn" id="1_3puq1"]
+
+[node name="brick_row_white" type="CanvasLayer"]
+
+[node name="brick" parent="." instance=ExtResource("1_3puq1")]
+position = Vector2(10, 80)
+
+[node name="brick2" parent="." instance=ExtResource("1_3puq1")]
+position = Vector2(105, 80)
+
+[node name="brick3" parent="." instance=ExtResource("1_3puq1")]
+position = Vector2(200, 80)
+
+[node name="brick4" parent="." instance=ExtResource("1_3puq1")]
+position = Vector2(295, 80)
+
+[node name="brick5" parent="." instance=ExtResource("1_3puq1")]
+position = Vector2(390, 80)
+
+[node name="brick6" parent="." instance=ExtResource("1_3puq1")]
+position = Vector2(485, 80)
+
+[node name="brick7" parent="." instance=ExtResource("1_3puq1")]
+position = Vector2(580, 80)
+
+[node name="brick8" parent="." instance=ExtResource("1_3puq1")]
+position = Vector2(675, 80)
+
+[node name="brick9" parent="." instance=ExtResource("1_3puq1")]
+position = Vector2(770, 80)
+
+[node name="brick10" parent="." instance=ExtResource("1_3puq1")]
+position = Vector2(865, 80)

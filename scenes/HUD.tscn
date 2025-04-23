@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://d27vcio8n3fsd"]
+
+[ext_resource type="Script" uid="uid://byfedrdtyr8bg" path="res://scripts/HUD.cs" id="1_fls4u"]
+[ext_resource type="FontFile" uid="uid://cpmugfs7rj75j" path="res://assets/font.ttf" id="1_qpvh6"]
+[ext_resource type="Resource" uid="uid://77htxcakrnlr" path="res://resources/HighScore.tres" id="2_1etfg"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_fls4u")
+HighScore = ExtResource("2_1etfg")
+
+[node name="label_score" type="Label" parent="."]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 206.0
+offset_bottom = 42.0
+theme_override_fonts/font = ExtResource("1_qpvh6")
+theme_override_font_sizes/font_size = 32
+text = "SCORE: 0"
+horizontal_alignment = 3
+
+[node name="label_lives" type="Label" parent="."]
+offset_left = 760.0
+offset_top = 10.0
+offset_right = 952.0
+offset_bottom = 42.0
+theme_override_fonts/font = ExtResource("1_qpvh6")
+theme_override_font_sizes/font_size = 32
+text = "LIVES: x x x"
+
+[node name="label_highscore" type="Label" parent="."]
+offset_left = 220.0
+offset_top = 10.0
+offset_right = 292.0
+offset_bottom = 42.0
+theme_override_fonts/font = ExtResource("1_qpvh6")
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 2
