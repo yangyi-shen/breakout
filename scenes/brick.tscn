@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://7u5uwgsgk8w1"]
+[gd_scene load_steps=5 format=3 uid="uid://7u5uwgsgk8w1"]
 
 [ext_resource type="Script" uid="uid://dhjxverp1cv8d" path="res://scripts/Brick.cs" id="1_0w5h4"]
 [ext_resource type="Texture2D" uid="uid://dguyq528e1qlg" path="res://assets/brick.png" id="1_5l4w1"]
+[ext_resource type="AudioStream" uid="uid://dluuovibckqmc" path="res://assets/brick_break.wav" id="3_7mekc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5l4w1"]
 size = Vector2(85, 20)
@@ -16,3 +17,8 @@ texture = ExtResource("1_5l4w1")
 [node name="collision_shape" type="CollisionShape2D" parent="."]
 position = Vector2(42.5, 10)
 shape = SubResource("RectangleShape2D_5l4w1")
+
+[node name="audio_break" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_7mekc")
+
+[connection signal="finished" from="audio_break" to="." method="OnAudioBreakFinished"]
