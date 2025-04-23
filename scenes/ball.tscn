@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://do67redfmoot1"]
+[gd_scene load_steps=5 format=3 uid="uid://do67redfmoot1"]
 
 [ext_resource type="Texture2D" uid="uid://bfvwagnsa8nmq" path="res://assets/ball.png" id="1_7s4qf"]
 [ext_resource type="Script" uid="uid://20t3rgueaqfw" path="res://scripts/Ball.cs" id="1_cxlvu"]
+[ext_resource type="AudioStream" uid="uid://cwb8f5qe6cxfw" path="res://assets/bounce.wav" id="3_f7cbr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7s4qf"]
 
@@ -13,3 +14,6 @@ texture = ExtResource("1_7s4qf")
 
 [node name="collision_shape" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_7s4qf")
+
+[node name="audio_bounce" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_f7cbr")

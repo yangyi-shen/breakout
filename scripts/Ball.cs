@@ -38,6 +38,7 @@ public partial class Ball : CharacterBody2D
 			GodotObject collidedNode = collision.GetCollider();
 			if (collidedNode.HasMethod("OnHitByBall")) // if collided node is a brick
 			{
+				GetNode<AudioStreamPlayer2D>("audio_bounce").Play(); // play bounce sound
 				EmitSignal(SignalName.hitBrick); // tell rest of game a brick has been hit
 				collidedNode.Call("OnHitByBall"); // tell brick it's been struck
 
@@ -52,12 +53,14 @@ public partial class Ball : CharacterBody2D
 			// if colliding horizontally
 			if (collisionNormal.X == 1 || collisionNormal.X == -1)
 			{
+				GetNode<AudioStreamPlayer2D>("audio_bounce").Play(); // play bounce sound
 				BallVelocity = new Vector2(BallVelocity.X * -1, BallVelocity.Y);
 			}
 
 			// if colliding vertically
 			if (collisionNormal.Y == 1 || collisionNormal.Y == -1)
 			{
+				GetNode<AudioStreamPlayer2D>("audio_bounce").Play(); // play bounce sound
 				BallVelocity = new Vector2(BallVelocity.X, BallVelocity.Y * -1);
 			}
 		}
@@ -65,6 +68,7 @@ public partial class Ball : CharacterBody2D
 		// handle colliding with screen top
 		if (Position.Y < 0)
 		{
+			GetNode<AudioStreamPlayer2D>("audio_bounce").Play(); // play bounce sound
 			BallVelocity = new Vector2(BallVelocity.X, BallVelocity.Y * -1); // bounce
 			EmitSignal(SignalName.hitScreenTop); // tell rest of game ball has hit screen top
 		}
@@ -93,6 +97,7 @@ public partial class Ball : CharacterBody2D
 		float ballWidth = BallSize.X / 2;
 		if (Position.X < ballWidth || Position.X > ScreenSize.X - ballWidth)
 		{
+			GetNode<AudioStreamPlayer2D>("audio_bounce").Play(); // play bounce sound
 			BallVelocity = new Vector2(BallVelocity.X * -1, BallVelocity.Y);
 		}
 	}
